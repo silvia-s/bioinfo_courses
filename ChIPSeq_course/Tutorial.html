@@ -1242,7 +1242,8 @@ gzip PLAYGROUND/1000reads.fastq</pre></div>
 <ul>
 <li>Exercise A: use SPP to calculate NSC and RSC for the IP data of the MCF7_GATA2_rep1 sample</li>
 </ul>
-<div class="highlight highlight-source-shell"><pre>/apps/well/R/3.2.2/bin/Rscript run_spp.R -c=FULL_DATASET/BAM_FILTERED_files/MCF7_GATA3_rep1.filtered.bam -savp -out=PLAYGROUND/MCF7_GATA3_rep1.filtered.report -odir=PLAYGROUND/</pre></div>
+<div class="highlight highlight-source-shell"><pre>PATH=/apps/well/samtools/0.1.19/bin:<span class="pl-smi">$PATH</span>
+/apps/well/R/3.2.2/bin/Rscript run_spp.R -c=FULL_DATASET/BAM_FILTERED_files/MCF7_GATA3_rep1.filtered.bam -savp -out=PLAYGROUND/MCF7_GATA3_rep1.filtered.report -odir=PLAYGROUND/</pre></div>
 <ul>
 <li>Exercise B: open the output PDF file and explore the report file (help can be found in the SPP_instructions.txt file)</li>
 </ul>
@@ -1375,7 +1376,8 @@ java -Xmx16G -jar /apps/well/igv/2.3.32/igv.jar</pre></div>
 - File -&gt; Load from File... -&gt; /well/workshop/workshop01/PLAYGROUND/MCF7_GATA3_rep1_peaks.narrowPeak<br>
 - File -&gt; Load from File... -&gt; /well/workshop/workshop01/FULL_DATASET/BAM_FILTERED_file/MCF7_GATA3_rep1.filtered.bam<br>
 - File -&gt; Load from File... -&gt; /well/workshop/workshop01/FULL_DATASET/BAM_FILTERED_file/MCF7_input_rep1.filtered.bam</p>
-<p>Finally, type PGR in the search box to focus on region 11:100,898,355-101,002,544 and compare it with Fig. 8 of the paper published using these data (see link above).</p>
+<p>Finally, type PGR in the search box to focus on region 11:100,898,355-101,002,544 and compare it with Fig. 8 of the paper published using these data (see link above).
+To visualise reads mapping to the forward or reverse strand, right click on each BAM track and select "Color alignments by read strand".</p>
 <p> </p>
 <p>                                                                                                                      <em>Thank you for attending this course, I hope you enjoyed it!</em></p>
 
